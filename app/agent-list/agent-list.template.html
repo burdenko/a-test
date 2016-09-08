@@ -1,0 +1,58 @@
+Поиск по имени: <input ng-model="$ctrl.query" />
+<h1>Контрагенты</h1>
+<table class="a_table">
+    <tr>
+        
+        <td width="150"> <a ng-click="$ctrl.sort('firstname')" >
+        <b >
+            Имя
+            <i class="glyphicon" ng-class="{'glyphicon-chevron-up': $ctrl.upFlag('firstname'),
+                                            'glyphicon-chevron-down': !$ctrl.upFlag('firstname')}"></i>
+         </b></a></td>
+        <td class='pole'>Фамилия {{$ctrl.agents[0].firstname}}</td>
+        <td class='pole'> e-mail</td>
+        <td class='pole'>Телефон</td>
+        <td class='pole'>День рождения</td>
+        <td>ID</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="agent in $ctrl.agents | filter:{firstname:$ctrl.query} | orderBy:$ctrl.sortFlag">
+        <td >
+            <input size="13" ng-show="agent.redact"  ng-model="agent.firstname" type="text"/> 
+            <span ng-hide="agent.redact">{{agent.firstname}}</span> 
+        </td>
+        <td>
+            <input size="13" ng-show="agent.redact"  ng-model="agent.lastname" type="text"/> 
+            <span ng-hide="agent.redact">{{agent.lastname}}</span> 
+        </td>
+        <td>
+            <input size="13" ng-show="agent.redact"  ng-model="agent.email" type="text"/> 
+            <span ng-hide="agent.redact">{{agent.email}}</span> 
+        </td>
+        <td>
+            <input size="13" ng-show="agent.redact"  ng-model="agent.phone" type="text"/> 
+            <span ng-hide="agent.redact">{{agent.phone}}</span>       
+        </td>
+        <td>
+            <input size="13" ng-show="agent.redact"  ng-model="agent.birthday" type="text"/> 
+            <span ng-hide="agent.redact">{{agent.birthday}}</span>       
+        </td>
+        <td>{{agent.idagent}}</td>
+
+        <td>&nbsp;<a href="" ng-click="$ctrl.deleteAgent(agent.idagent)" ng-hide="$ctrl.hide">
+            <img src="/image/delete_16.png"/ title="Удалить запись">  </a>&nbsp;
+        </td>
+        <td>&nbsp;<a  href="" ng-click="$ctrl.redactAgent(agent.idagent)" ng-hide="$ctrl.hide" >
+            <img src="image/pencil_16.png" title="Редактировать запись" /> </a>&nbsp;
+        </td>
+        <td><a  href="" ng-click="$ctrl.redactAgent(agent.idagent)" ng-show="agent.redact" >
+            <img src="image/save_16.png" title="Сохранить запись" /></a>
+        </td>
+
+    </tr>
+
+</table>
+<br />
+<a href="" ng-click="$ctrl.addNewAgent()"><img src="/image/plus_16.png"/ title="Добвить новую запись"></a>

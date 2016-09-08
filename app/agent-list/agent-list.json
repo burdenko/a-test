@@ -1,0 +1,40 @@
+[
+  {
+	"idagent": "1",
+	"firstname": "Ivan", 
+	"lastname": "Otvertkin",
+	"email": "ivan@mail.ru",
+	"phone":"+7-978-333-11-00",
+	"birthday":"01/01/1911",
+	"redact":false
+  },
+  {
+	"idagent": "2",
+	"firstname": "CIlya", 
+	"lastname": "Muromec",
+	"email": "ilya@gmail.com",
+	"phone":"+7-978-344-66-22",
+	"birthday":"02/02/1922",
+	"redact":false
+  },
+  {
+	"idagent": "3",
+	"firstname": "Dobrynya", 
+	"lastname": "Nikitych",
+	"email": "dobr@yandex.ru",
+	"phone":"+7-978-432-75-33",
+	"birthday":"03/03/1933",
+	"redact":false
+  }
+  ,
+  {
+	"idagent": "4",
+	"firstname": "aDobrynya", 
+	"lastname": "Nikitych",
+	"email": "dobr@yandex.ru",
+	"phone":"+7-978-432-75-33",
+	"birthday":"03/03/1933",
+	"redact":false
+  }
+
+]
