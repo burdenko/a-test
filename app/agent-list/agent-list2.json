@@ -1,0 +1,40 @@
+[
+  {
+	"idagent": "5",
+	"firstname": "Aleksandr", 
+	"lastname": "Pushkin",
+	"email": "pushkin@mail.ru",
+	"phone":"+7-978-233-32-21",
+	"birthday":"1921-04-08",
+	"edit":false
+  },
+  {
+	"idagent": "6",
+	"firstname": "Aleksandr", 
+	"lastname": "Block",
+	"email": "block@gmail.com",
+	"phone":"+7-978-344-66-22",
+	"birthday":"1933-01-06",
+	"edit":false
+  },
+  {
+	"idagent": "7",
+	"firstname": "Anna", 
+	"lastname": "Ahmatova",
+	"email": "ahmatova@yandex.ru",
+	"phone":"+7-978-432-65-42",
+	"birthday":"2016-09-05",
+	"edit":false
+  }
+  ,
+  {
+	"idagent": "8",
+	"firstname": "Sergey", 
+	"lastname": "Esenin",
+	"email": "esenin@yandex.ru",
+	"phone":"+7-978-638-44-27",
+	"birthday":"1933-01-06",
+	"edit":false
+  }
+
+]

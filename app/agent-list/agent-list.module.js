@@ -1,2 +1,4 @@
 'use strict';
-angular.module('agentList', []);
+
+
+angular.module('agentList', ['core.agent']);

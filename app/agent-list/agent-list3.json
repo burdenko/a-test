@@ -1,0 +1,40 @@
+[
+  {
+	"idagent": "9",
+	"firstname": "Lev", 
+	"lastname": "Tolstoy",
+	"email": "tolstoy@mail.ru",
+	"phone":"+7-978-265-36-32",
+	"birthday":"1901-09-24",
+	"edit":false
+  },
+  {
+	"idagent": "10",
+	"firstname": "Muhail", 
+	"lastname": "Sholohov",
+	"email": "sholohovk@gmail.com",
+	"phone":"+7-978-46-11-22",
+	"birthday":"1930-01-08",
+	"edit":false
+  },
+  {
+	"idagent": "11",
+	"firstname": "Anton", 
+	"lastname": "Chehov",
+	"email": "chehov@yandex.ru",
+	"phone":"+7-978-735-57-42",
+	"birthday":"1943-03-21",
+	"edit":false
+  }
+  ,
+  {
+	"idagent": "12",
+	"firstname": "Ivan", 
+	"lastname": "Turgenev",
+	"email": "turgenev@yandex.ru",
+	"phone":"+7-978-664-14-37",
+	"birthday":"1965-07-09",
+	"edit":false
+  }
+
+]

@@ -1,3 +1,3 @@
 'use strict';
-angular.module('kontrAgent',['agentList']);
+angular.module('kontrAgent',['ngCookies','ngRoute', 'core','agentList', 'transactionJournal', 'operationType', 'login']);
 

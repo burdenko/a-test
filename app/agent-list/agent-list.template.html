@@ -1,11 +1,18 @@
-Поиск по имени: <input ng-model="$ctrl.query" />
+
+<div class="logout"><a href="" ng-click="$ctrl.logout()">Logout</a></div>
+<div class="search">Поиск по имени: <input ng-model="$ctrl.query" /></div>
+
+<div class="search">Поиск интервала даты рождения - From: 
+<input type="date" name="date1" ng-model="$ctrl.dateFrom" max="{{$ctrl.dateTo.toISOString().substring(0,10)}}"> &nbsp;&nbsp; To: 
+<input type="date" name="date2"  ng-model="$ctrl.dateTo" min="{{$ctrl.datePlus3($ctrl.dateFrom)}}">&nbsp;&nbsp; <input type="button" value="Поиск" ng-click="$ctrl.addNewJson(4)"> </div> 
+
 <h1>Контрагенты</h1>
 <table class="a_table">
     <tr>
         <td width="150"> <a ng-click="$ctrl.sort('firstname')" >
-        <b>Имя<i class="glyphicon" ng-class="{'glyphicon-chevron-up': $ctrl.upFlag('firstname'),'glyphicon-chevron-down': !$ctrl.upFlag('firstname')}"></i>
+        <b>Имя<i class="glyphicon" ng-class="{'glyphicon-chevron-up': $ctrl.upFlag('firstname'),'glyphicon-chevron-down': $ctrl.downFlag('firstname')}"></i>
         </b></a></td>
-        <td class='field'>Фамилия {{$ctrl.agents[0].firstname}}</td>
+        <td class='field'>Фамилия</td>
         <td class='field'> e-mail</td>
         <td class='field'>Телефон</td>
         <td class='field'>День рождения</td>
@@ -32,21 +39,25 @@
             <span ng-hide="agent.edit">{{agent.phone}}</span>       
         </td>
         <td>
-            <input size="13" ng-show="agent.edit"  ng-model="agent.birthday" type="text"/> 
-            <span ng-hide="agent.edit">{{agent.birthday}}</span>       
+            <input type="date"  ng-show="agent.edit"  ng-model="agent.birthday"/> 
+            <span ng-hide="agent.edit">{{$ctrl.transformationDate(agent.birthday)}}</span>       
         </td>
         <td>{{agent.idagent}}</td>
 
-        <td>&nbsp;<a href="" ng-click="$ctrl.deleteAgent(agent.idagent)" ng-hide="$ctrl.hide">
+        <td>&nbsp;<a href="" ng-click="$ctrl.deleteAgent(agent)" ng-hide="$ctrl.hide">
             <img src="/image/delete_16.png"/ title="Удалить запись">  </a>&nbsp;
         </td>
-        <td>&nbsp;<a  href="" ng-click="$ctrl.editAgent(agent.idagent)" ng-hide="$ctrl.hide" >
+        <td>&nbsp;<a  href="" ng-click="$ctrl.editAgent(agent)" ng-hide="$ctrl.hide" >
             <img src="image/pencil_16.png" title="Редактировать запись" /> </a>&nbsp;
         </td>
-        <td><a  href="" ng-click="$ctrl.editAgent(agent.idagent)" ng-show="agent.edit" >
+        <td><a  href="" ng-click="$ctrl.editAgent(agent)" ng-show="agent.edit" >
             <img src="image/save_16.png" title="Сохранить запись" /></a>
         </td>
     </tr>
 </table>
 <br />
-<a href="" ng-click="$ctrl.addNewAgent()"><img src="/image/plus_16.png"/ title="Добвить новую запись"></a>
+<a href="" ng-click="$ctrl.addNewJson(1)">1</a>&nbsp;&nbsp;<a href="" ng-click="$ctrl.addNewJson(2)">2</a>&nbsp;&nbsp;<a href="" ng-click="$ctrl.addNewJson(3)">3</a>
+<br />
+<br />
+<a href="" ng-click="$ctrl.addNewAgent()"><img src="/image/plus_16.png"/ title="Добвить новую запись"> Добавить новую запись</a>
+
